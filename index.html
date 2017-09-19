@@ -6,174 +6,80 @@
     <title>LeverX</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
-
 <body>
-    <div class="all">
-        <div class="list">
-            <div class="listhead">
-                <span class="ordercount">Orders(10)</span>
-                <div class="previous"><img src="images/pre.png"></div>
-                <input type="text" class="searchinput" placeholder="Search">
-                <button class="search"></button>
-                <button class="refresh"></button>
-            </div>
-            <div class="listorder">
-                <ul>
-                    <li>
-                        <div class="item">
-                            <div class="ordernumber">Order 7991</div>
-                            <div class="orderdate">21.11.2016</div>
-                            <div class="costumer">Berglunds snabbkop</div>
-                            <div class="term">In time</div>
-                            <div class="arrivaldate">Shipped: 25 november 2016</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <div class="ordernumber">Order 7918</div>
-                            <div class="orderdate">18.09.2016</div>
-                            <div class="costumer">Tortuga Restaurante</div>
-                            <div class="term urgent">Urgent</div>
-                            <div class="arrivaldate">Shipped: 26 september 2016</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <div class="ordernumber">Order 7375</div>
-                            <div class="orderdate">06.10.2016</div>
-                            <div class="costumer">Around the Horn</div>
-                            <div class="term">In time</div>
-                            <div class="arrivaldate">Shipped: 14 october 2016 </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <div class="ordernumber">Order 7311</div>
-                            <div class="orderdate">21.11.2016</div>
-                            <div class="costumer">Alfreds Futterkiste</div>
-                            <div class="term">In time</div>
-                            <div class="arrivaldate">Shipped: 25 november 2016 </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <div class="ordernumber">Order 6858</div>
-                            <div class="orderdate">13.11.2016</div>
-                            <div class="costumer">Tortuga Restaurante</div>
-                            <div class="term">In time</div>
-                            <div class="arrivaldate">Shipped: 14 november 2016 </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <div class="ordernumber">Order 6368</div>
-                            <div class="orderdate">13.11.2016</div>
-                            <div class="costumer">Alfreds Futterkiste</div>
-                            <div class="term">In time</div>
-                            <div class="arrivaldate">Shipped: 19 november 2016 </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <div class="ordernumber">Order 6189</div>
-                            <div class="orderdate">28.11.2016</div>
-                            <div class="costumer">Berglunds snabbkop</div>
-                            <div class="term">In time</div>
-                            <div class="arrivaldate">Shipped: 20 november 2016 </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item">
-                            <div class="ordernumber">Order 7991</div>
-                            <div class="orderdate">21.11.2016</div>
-                            <div class="costumer">Berglunds snabbkop</div>
-                            <div class="term">In time</div>
-                            <div class="arrivaldate">Shipped: 20 november 2016 </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer">
-                <button class="filter"></button>
-                <button class="sort"></button>
-            </div>
+<div class="all">
+    <div class="list">
+        <div class="listhead">
+            <span class="ordercount"></span>
+            <button class="back"></button>
+            <input type="text" class="searchinput" placeholder="Search">
+            <button class="search"></button>
+            <button class="refresh"></button>
         </div>
-        <div class="order">
-            <div class="orderhead">Order</div>
-            <div class="maininfo">
-                <div class="mainnumber">Order 7918</div>
-                <div class="totalprice">150 935,13<br><span>EUR</span></div>
-                <div class="maincostumer">Costumer:Tortuga Restourant</div>
-                <div class="maindate">Ordered: 18 january 2016</div>
-                <div class="mainarrival">Shipped: 26 september 2016</div>
-                <div><img src="images/car.png"></div>
-                <div><img src="images/person.png"></div>
-                <div></div>
-            </div>
-            <div class="adress">
-                <div>Shipping Adress</div>
-                <div class="line"></div>
-                <div class="contactinfo">
-                    <span>Name:</span><br>
-                    <span>Street:</span><br>
-                    <span>ZIP Code / City:</span><br>
-                    <span>Region:</span><br>
-                    <span>Country:</span>
-                </div>
-                <div class="contactvalues">
-                    <span>ExcellenParcel</span><br>
-                    <span>Tottenham Court Road</span><br>
-                    <span>N170AA London</span><br>
-                    <span>Greater London</span><br>
-                    <span>United Kingdom</span>
-                </div>
-            </div>
-            <div class="lineitem">
-                <p>Line Items (4)</p>
-                <table class="itemstable">
-                    <thead>
-                        <tr>
-                            <td>Product</td>
-                            <td>Unit Price</td>
-                            <td>Quantity</td>
-                            <td>Total</td>
-                        </tr>
-                    </thead>
-                    <tr>
-                        <td><strong class="strong">Aniseed Syrop</strong><br>1412</td>
-                        <td><strong>65.89 </strong>EUR</td>
-                        <td>899</td>
-                        <td>
-                            <strong>59 235,11</strong> EUR</td>
-                    </tr>
-                    <tr>
-                        <td><strong class="strong">Tunnbrod</strong><br>5672</td>
-                        <td><strong>14.77 </strong>EUR</td>
-                        <td>2367</td>
-                        <td>
-                            <strong>34 960,59</strong> EUR</td>
-                    </tr>
-                    <tr>
-                        <td><strong class="strong">Nothwood Cranberry Sauce</strong><br>5046</td>
-                        <td><strong>61.69 </strong>EUR</td>
-                        <td>867</td>
-                        <td>
-                            <strong>53 485,23</strong> EUR</td>
-                    </tr>
-                    <tr>
-                        <td><strong class="strong">Camembert Pierrot</strong><br>1412</td>
-                        <td><strong>3.07 </strong>EUR</td>
-                        <td>1060</td>
-                        <td>
-                            <strong>3 254,20</strong> EUR</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="footer secondfooter">
-                <button class="mess"></button>
-            </div>
+        <div class="listorder">
+            <ul>
+            </ul>
+        </div>
+        <div class="footer">
+            <button class="filter"></button>
+            <button class="sort"></button>
         </div>
     </div>
+    <div class="order">
+        <div class="orderhead">Order</div>
+        <div class="notselectedorder">Please select the order</div>
+        <div class="maininfo">
+            <div class="orderinfo">
+            </div>
+            <div class="deliver"><img src="images/car.png"></div>
+            <div class="person"><img src="images/person.png"></div>
+            <div class="mainline"></div>
+        </div>
+        <div class="costumerinfo"><p>Costumer Information</p>
+            <div class="costumercontactinfo">
+                <span>First Name:</span><br>
+                <span>Last Name:</span><br>
+                <span>Adress:</span><br>
+                <span>Phone:</span><br>
+                <span>Email:</span>
+            </div>
+            <div class="costumercontactvalues"></div>
+        </div>
+        <div class="adress">
+            <div>Shipping Adress</div>
+            <div class="line"></div>
+            <div class="contactinfo">
+                <span>Name:</span><br>
+                <span>Street:</span><br>
+                <span>ZIP Code / City:</span><br>
+                <span>Region:</span><br>
+                <span>Country:</span>
+            </div>
+            <div class="contactvalues">
+            </div>
+        </div>
+        <div class="lineitem">
+            <p class="lineitemhead"></p>
+            <input type="text" class="searchinputproduct" placeholder="Search product">
+            <table class="itemstablehead">
+                <thead>
+                <td>Product</td>
+                <td>Unit Price</td>
+                <td>Quantity</td>
+                <td>Total</td>
+                </thead>
+            </table>
+            <table class="itemstable">
+                <!--<tbody class="src"></tbody>-->
+            </table>
+        </div>
+        <div class="presoninfo"></div>
+        <div class="footer secondfooter">
+            <button class="mess"></button>
+        </div>
+    </div>
+</div>
+<script src="scripts/data.js"></script>
+<script src="scripts/script.js"></script>
 </body>
-
 </html>

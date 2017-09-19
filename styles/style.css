@@ -28,6 +28,7 @@ body {
     position: relative;
     display: flex;
     flex-direction: column;
+    border-right: 1px solid #ebebeb;
 }
 
 .order {
@@ -47,8 +48,7 @@ body {
 }
 
 .listorder {
-    overflow-y: scroll;
-    flex: all;
+    overflow-y: auto;
 }
 
 .listorder ul {
@@ -74,16 +74,22 @@ body {
     cursor: pointer;
 }
 
+.iddate, .costumerstatus {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
 .item:hover {
     background-color: #e8eff7;
 }
 
- ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 12px;
     background-color: white;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #b2b2b2;
 }
 
@@ -99,6 +105,7 @@ body {
     margin-bottom: 0.5em;
     width: 16em;
     padding-right: 3.5em;
+    border-radius: 5px;
 }
 
 .search {
@@ -118,44 +125,32 @@ body {
     height: 20px;
     width: 20px;
     position: absolute;
-    right: 10px;
+    right: 12px;
     top: 26px;
     cursor: pointer;
 }
 
-.previous {
+.back {
     position: absolute;
     left: 0;
     top: 0;
     cursor: pointer;
-}
-
-.previous img {
+    border: 0;
+    background: url(../images/pre.png);
     width: 20px;
     height: 20px;
+    background-size: 20px;
 }
 
 .ordernumber, .orderdate, .costumer, .term, .arrivaldate {
-    position: relative;
     margin: 0.5em;
     padding: 0;
-}
-
-.ordernumber, .orderdate, .costumer, .term {
-    display: inline-block;
-}
-
-.ordernumber, .costumer, .arrivaldate {
-    float: left;
-}
-
-.orderdate, .term {
-    float: right;
+    flex: 1;
 }
 
 .term {
-    margin-top: 0;
     color: green;
+    text-align: right;
 }
 
 .ordernumber {
@@ -164,6 +159,7 @@ body {
 
 .orderdate {
     font-size: 14pt;
+    text-align: right;
 }
 
 .costumer, .arrivaldate {
@@ -174,7 +170,11 @@ body {
     font-size: 10pt;
 }
 
-.urgent {
+.red {
+    color: red !important;
+}
+
+.orange {
     color: darkorange !important;
 }
 
@@ -187,7 +187,8 @@ body {
     font-size: 10pt;
     padding: 0.5em;
     color: #707181;
-    height: 2.5em;
+    height: 2em;
+    min-height: 2em;
 }
 
 .maininfo {
@@ -196,18 +197,14 @@ body {
     background-color: #eff4f8;
     width: 100%;
     overflow: hidden;
-    flex: 2;
-    min-height: 13em;
+    flex: 1;
+    min-height: 15em;
     max-height: 15em;
 }
 
-.maininfo img {
-    width: 40px;
-    height: 40px;
-}
-
-.maininfo img:last-child {
-    left: 5.5em;
+.orderinfo {
+    margin: 0;
+    padding: 0;
 }
 
 .mainnumber {
@@ -217,7 +214,7 @@ body {
     display: inline-block;
 }
 
-.maininfo div:nth-child(n+3) {
+.maincostumer, .maindate, .mainarrival {
     margin: 1em;
     margin-left: 2.5em;
     font-size: 9pt;
@@ -238,7 +235,7 @@ body {
     font-size: 8pt;
 }
 
-.maininfo div:nth-child(6) {
+.maininfo .deliver {
     margin: 0;
     padding: 0;
     position: absolute;
@@ -252,12 +249,12 @@ body {
     overflow: hidden;
 }
 
-.maininfo div:nth-child(7) {
+.maininfo .person {
     margin: 0;
     padding: 0;
     position: absolute;
     width: auto;
-    left: 2em;
+    left: 1em;
     bottom: 0;
     cursor: pointer;
     height: auto;
@@ -266,7 +263,12 @@ body {
     z-index: 1;
 }
 
-.maininfo div:last-child {
+.deliver img, .person img {
+    width: 40px;
+    height: 40px;
+}
+
+.maininfo .mainline {
     position: absolute;
     bottom: 0;
     width: 100%;
@@ -277,11 +279,7 @@ body {
     z-index: 0;
 }
 
-.maininfo div:nth-child(6):hover {
-    box-shadow: inset 0px -2px 0px 0px #3880b0;
-}
-
-.maininfo div:nth-child(7):hover {
+.maininfo .person:hover, .deliver:hover {
     box-shadow: inset 0px -2px 0px 0px #3880b0;
 }
 
@@ -306,62 +304,64 @@ body {
     background-color: #cecece;
 }
 
-.contactinfo, .contactvalues {
+.contactinfo, .contactvalues, .costumercontactinfo, .costumercontactvalues {
     width: auto;
     display: inline-block;
     font-size: 10pt;
 }
 
-.contactinfo {
+.contactinfo, .costumercontactinfo {
     text-align: right;
     margin: 1em 0.5em 0 8em;
     color: #707181;
+}
+
+.costumercontactinfo, .costumercontactvalues {
+    font-size: 12pt;
+}
+
+.costumercontactvalues {
+    text-align: left;
+    color: black;
 }
 
 .lineitem {
     width: 100%;
     background-color: #fafafa;
     flex: 4;
+    position: relative;
 }
 
-.lineitem p {
+.lineitemhead {
     font-size: 14pt;
     margin: 1em 0 0 2em;
+    width: 10em;
 }
 
-.itemstable {
+.itemstable, .itemstablehead {
     width: 100%;
     border-collapse: collapse;
-    border-top: 1px solid #cdcdcd;
     border-bottom: 1px solid #cdcdcd;
     text-align: center;
     font-size: 10pt;
     background-color: white;
     margin: 0.5em auto;
+    margin-top: 0;
     width: 95%;
     height: auto;
     margin-bottom: 3em;
 }
 
-.itemstable thead {
-    background-color: #f7f7f7;
+.itemstable strong {
+    font-size: 11pt;
 }
 
 .itemstable tr {
     border-bottom: 1px solid #cdcdcd;
-    min-height: 3em;
 }
 
-.itemstable thead td {
-    line-height: normal;
-    color: #707181;
-    border-left: 0;
-    border-right: 0;
-    padding: 0.5em !important;
-}
-
-.itemstable strong {
-    font-size: 11pt;
+.itemstable tr td {
+    width: 25%;
 }
 
 .itemstable tr td:first-child {
@@ -370,11 +370,47 @@ body {
     line-height: 1em;
     padding: 0.5em;
     padding-top: 0;
+    width: 30%;
 }
 
 .itemstable tr td:last-child {
     text-align: right;
-    padding-right: 1em;
+    padding-right: 0.5em;
+}
+
+.itemstablehead {
+    margin-top: 0.5em;
+    margin-bottom: 0;
+    border-top: 1px solid #cdcdcd;
+}
+
+.itemstablehead thead {
+    background-color: #f7f7f7;
+    border-bottom: 1px solid #cdcdcd;
+    min-height: 3em;
+}
+
+.itemstablehead thead td {
+    line-height: normal;
+    width: 25%;
+    color: #707181;
+    border-left: 0;
+    border-right: 0;
+    padding: 0.5em !important;
+    cursor: pointer;
+}
+
+.itemstablehead thead td:first-child {
+    text-align: left;
+    padding-left: 1em;
+    line-height: 1em;
+    padding: 0.5em;
+    padding-top: 0;
+    width: 30%;
+}
+
+.itemstablehead thead td:last-child {
+    text-align: right;
 }
 
 .strong {
@@ -388,8 +424,9 @@ body {
     height: 2em;
     width: 280px;
     bottom: 0;
-    border-right: 1px solid white;
+    /*border-right: 1px solid white;*/
     background-color: #2e3c47;
+    z-index: 2;
 }
 
 .secondfooter {
@@ -421,3 +458,66 @@ body {
 .mess {
     background: url(../images/mess.png) no-repeat;
 }
+
+.notselectedorder {
+    padding-top: 8em;
+    height: 100%;
+    background-color: #eff4f8;
+    text-align: center;
+    font-family: Tahoma;
+    font-size: 20pt;
+    color: #707181;
+}
+
+.selected {
+    background-color: #e8eff7;
+}
+
+.searchinputproduct {
+    width: 10em;
+    position: absolute;
+    display: inline-block;
+    right: 6em;
+    top: 1em;
+    padding: 3px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding-right: 4em;
+}
+
+.costumerinfo {
+    height: 100%;
+    background-color: #fafafa;
+    text-align: center;
+    padding: 2em;
+    color: #707181;
+}
+
+.selectedtab {
+    box-shadow: inset 0px -2px 0px 0px #3880b0;
+}
+
+/*a:active{*/
+/*background-color: #2e3c47;*/
+/*}*/
+/*.searchproducts {*/
+/*height: 20px;*/
+/*width: 20px;*/
+/*background: url(../images/search.jpg);*/
+/*border: 0;*/
+/*position: absolute;*/
+/*right: 110px;*/
+/*top: 15px;*/
+/*cursor: pointer;*/
+/*}*/
+
+/*.refreshproducts {*/
+/*background: url(../images/refresh.jpg);*/
+/*border: 0;*/
+/*height: 20px;*/
+/*width: 20px;*/
+/*position: absolute;*/
+/*right: 85px;*/
+/*top: 15px;*/
+/*cursor: pointer;*/
+/*}*/
