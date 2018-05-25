@@ -93,7 +93,7 @@ var Orders = [
 		products: [
 			{
 				id			: "1",
-				name		: "Mark Tsiareshka",
+				name		: "Rembo",
 				price		: "21",
 				currency	: "EUR",
 				quantity	: "5",
