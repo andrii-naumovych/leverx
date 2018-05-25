@@ -320,11 +320,6 @@ body {
     font-size: 12pt;
 }
 
-.costumercontactvalues {
-    text-align: left;
-    color: black;
-}
-
 .lineitem {
     width: 100%;
     background-color: #fafafa;
@@ -338,6 +333,7 @@ body {
     width: 10em;
 }
 
+/*WTF???*/
 .itemstable, .itemstablehead {
     width: 100%;
     border-collapse: collapse;
@@ -386,7 +382,6 @@ body {
 
 .itemstablehead thead {
     background-color: #f7f7f7;
-    border-bottom: 1px solid #cdcdcd;
     min-height: 3em;
 }
 
@@ -431,7 +426,7 @@ body {
 
 .secondfooter {
     width: 840px;
-    border-right: none;
+    border-right: 1px solid black;
 }
 
 .sort, .filter, .mess {
@@ -496,28 +491,3 @@ body {
 .selectedtab {
     box-shadow: inset 0px -2px 0px 0px #3880b0;
 }
-
-/*a:active{*/
-/*background-color: #2e3c47;*/
-/*}*/
-/*.searchproducts {*/
-/*height: 20px;*/
-/*width: 20px;*/
-/*background: url(../images/search.jpg);*/
-/*border: 0;*/
-/*position: absolute;*/
-/*right: 110px;*/
-/*top: 15px;*/
-/*cursor: pointer;*/
-/*}*/
-
-/*.refreshproducts {*/
-/*background: url(../images/refresh.jpg);*/
-/*border: 0;*/
-/*height: 20px;*/
-/*width: 20px;*/
-/*position: absolute;*/
-/*right: 85px;*/
-/*top: 15px;*/
-/*cursor: pointer;*/
-/*}*/

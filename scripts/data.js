@@ -93,7 +93,7 @@ var Orders = [
 		products: [
 			{
 				id			: "1",
-				name		: "Queso Cabrales",
+				name		: "Mark Tsiareshka",
 				price		: "21",
 				currency	: "EUR",
 				quantity	: "5",
@@ -106,46 +106,6 @@ var Orders = [
 				currency	: "EUR",
 				quantity	: "3",
 				totalPrice	: "114"
-			},
-			{
-				id			: "3",
-				name		: "Pavlova",
-				price		: "120",
-				currency	: "RUB",
-				quantity	: "5",
-				totalPrice	: "600"
-			},
-			{
-				id			: "4",
-				name		: "Sir Rodney's Marmalade",
-				price		: "5",
-				currency	: "BYN",
-				quantity	: "3",
-				totalPrice	: "15"
-			},
-			{
-				id			: "5",
-				name		: "Genen Shouyu",
-				price		: "40",
-				currency	: "USD",
-				quantity	: "7",
-				totalPrice	: "280"
-			},
-			{
-				id			: "6",
-				name		: "Tofu",
-				price		: "23.25",
-				currency	: "USD",
-				quantity	: "1",
-				totalPrice	: "23.25"
-			},
-			{
-				id			: "7",
-				name		: "Alice Mutton",
-				price		: "32",
-				currency	: "UAH",
-				quantity	: "39",
-				totalPrice	: "1248"
 			}
 		]
 	}
